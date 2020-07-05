@@ -137,3 +137,30 @@ console.log("陣列的數量:" + numbers.length);
 var tA = 100;
 var tB = 80;
 console.log(tA > tB);
+
+// 顛倒運算子
+
+var tC = true;
+console.log(!tC);
+
+var num1 = 8;
+var num2 = "9";
+console.log(num1 == num2);    //比較值
+console.log(num1 === num2);   //比較值和類別
+
+// 並且 &&
+// 只要有一個 false 結果就是 false
+console.log(true && true);          // t
+console.log(true && false);         // f
+console.log(false && true);         // f
+console.log(false && false);        // f
+
+// 或者 ||
+// 只要有一個 true 結果就是 true
+console.log(true || true);          // t
+console.log(true || false);         // t
+console.log(false || true);         // t
+console.log(false || false);        // f
+
+
+
