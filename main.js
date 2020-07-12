@@ -163,4 +163,112 @@ console.log(false || true);         // t
 console.log(false || false);        // f
 
 
+// 判斷式
+// if (布林值) {當布林值為true時，執行程式}
 
+if (true) {
+    console.log ("我是判斷式");
+}
+
+// ifelse判斷式
+// if (布林值為true) {執行程式} else{若布林值為false則執行此處程式}
+
+var bool = false;
+
+if (bool) {
+    console.log ("布林值為true")
+} else {
+    console.log ("布林值為false")    
+}
+
+// 如果分數 >= 60 :及格
+// 如果分數 <= 59 :補考
+// 如果分數 <= 40 :被當
+// else if 可以有無限多個
+var score = document.getElementById ("score");
+var result = document.getElementById ("result");
+
+score.onchange = () => {
+
+    var s = parseInt (score.value);
+    
+    if (s >= 60) {
+        result.innerText = "分數:" + s + "-及格" ;
+
+    }
+    
+    else if (s >= 40) {
+        result.innerText = "分數:" + s  + "-補考" ;
+    }
+
+    else {
+        result.innerText = "分數:" + s  + "-重修" ; 
+    }
+    
+    
+}
+
+// 迴圈 Loop for 
+// 語法
+// for (初始值；條件-布林值；迭代器_迴圈結束後會執行的區域) {程式}
+// 初始值：迴圈開始的值
+// 條　件：迴圈會執行的條件 - 當條件為 true 執行，false 結束迴圈
+// 迭代器：初始值處理 - 遞增 ++
+
+for (let i = 0 ; i < 10; i++) {
+    console.log ("迴圈:" + i);
+    
+}
+
+// 陣列
+// products.length 陣列.長度(數量)
+// ["拿鐵","摩卡","黑咖啡","蜂蜜牛奶"] 排序是0,1,2,3 長度是 4
+var products = ["拿鐵","摩卡","黑咖啡","蜂蜜牛奶"];
+for (let i = 0; i < products.length; i++) {
+    console.log (products[i]);
+     }
+
+var ps = document.getElementsByClassName ("product");
+
+console.log(ps);
+
+for (let i = 0; i < ps.length; i++) {
+    ps[i].innerText = products[i]
+    
+}
+
+
+// const 常數 不能更動
+const pi = 123456;
+// pi = pi + 10;
+
+// let 與 var 差異
+// let 在同樣的區塊內不能重複 - 安全
+// 只在區塊內有效
+
+var countA = 10;
+var countA = 7;
+// let countA = 5; // 重複 瀏覽器顯示錯誤
+
+{
+    let countA = 5;
+    console.log(countA);
+}
+
+console.log(countA);
+
+var countB = 99;
+
+{
+    var countB = 77;
+}
+
+console.log(countB);
+
+let countC = 99;
+
+{
+    let countC = 77;
+}
+
+console.log(countC);
